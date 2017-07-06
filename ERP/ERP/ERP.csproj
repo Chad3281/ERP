@@ -35,8 +35,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <Compile Include="Common\ICode.cs" />
     <Compile Include="Inventory_Management\InventoryManagement\IInventory.cs" />
     <Compile Include="Inventory_Management\InventoryManagement\IManagementStrategy.cs" />
     <Compile Include="Inventory_Management\InventoryManagement\JIT.cs" />
@@ -45,6 +45,14 @@
     <Compile Include="Inventory_Management\Items\IOrder.cs" />
     <Compile Include="Inventory_Management\Items\IUnit.cs" />
     <Compile Include="Inventory_Management\OrderManagement\IPurchaseOrder.cs" />
+    <Compile Include="SCM\IUnit.cs" />
+    <Compile Include="SCM\IUom.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SCM\WMS\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

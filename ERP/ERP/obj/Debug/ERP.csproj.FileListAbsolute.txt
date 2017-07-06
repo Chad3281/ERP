@@ -1,2 +1,3 @@
 D:\VS_Projects\Projects\Shared\ERP\ERP\bin\Debug\ERP.exe.config
 D:\VS_Projects\Projects\Shared\ERP\ERP\obj\Debug\ERP.csprojResolveAssemblyReference.cache
+C:\Users\JonesR\Documents\GitHub\Erp\ERP\ERP\bin\Debug\ERP.exe.config
