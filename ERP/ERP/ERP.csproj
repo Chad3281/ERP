@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{29F26904-3C87-4326-A38A-C73E1A8CB522}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ERP</RootNamespace>
     <AssemblyName>ERP</AssemblyName>
@@ -32,27 +32,38 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\ICode.cs" />
+    <Compile Include="Common\IEmployee.cs" />
+    <Compile Include="Common\ISchedule.cs" />
     <Compile Include="Inventory_Management\InventoryManagement\IInventory.cs" />
     <Compile Include="Inventory_Management\InventoryManagement\IManagementStrategy.cs" />
     <Compile Include="Inventory_Management\InventoryManagement\JIT.cs" />
     <Compile Include="Inventory_Management\InventoryManagement\MRP.cs" />
-    <Compile Include="Inventory_Management\Items\IItem.cs" />
     <Compile Include="Inventory_Management\Items\IOrder.cs" />
     <Compile Include="Inventory_Management\Items\IUnit.cs" />
     <Compile Include="Inventory_Management\OrderManagement\IPurchaseOrder.cs" />
     <Compile Include="SCM\IUnit.cs" />
     <Compile Include="SCM\IUom.cs" />
+    <Compile Include="SCM\WMS\IDockDoor.cs" />
+    <Compile Include="Common\ILocation.cs" />
+    <Compile Include="SCM\WMS\IWarehouse.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="SCM\WMS\" />
+    <Folder Include="SCM\WMS\Controlling\" />
+    <Folder Include="SCM\WMS\Directing\" />
+    <Folder Include="SCM\WMS\Organizing\" />
+    <Folder Include="SCM\WMS\Planning\" />
+    <Folder Include="SCM\WMS\Staffing\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

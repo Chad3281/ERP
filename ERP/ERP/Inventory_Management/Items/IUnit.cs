@@ -3,12 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ERP.Common;
 
 namespace InventoryManagement.Items
 {
-    // Stock Keeping Unit (SKU)/Universal Product Code(UPC)/ European Article Number(EAN):
     public interface IUnit
     {
-        string Code { get; set; }
+        ICode Code { get; set; }
+
+        // Unit information:
+        double Weight { get; set; }
+        double Height { get; set; }
+        double Width { get; set; }
+
+        ILocation Location { get; set; }
     }
 }

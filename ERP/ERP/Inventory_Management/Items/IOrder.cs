@@ -8,7 +8,7 @@ namespace InventoryManagement.Items
 {
     public interface IOrder
     {
-        int Quantity { get; set; }
+        double Quantity { get; set; }
         double Price { get; set; }
         double Total { get; set; }
     }
