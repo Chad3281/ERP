@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ERP.Common
+namespace ERP.Common.Location
 {
-    public interface ILocation
+    public interface ICity : ICode
     {
-        string Address { get; set; }
-        string LocationNumber { get; set; }
     }
 }

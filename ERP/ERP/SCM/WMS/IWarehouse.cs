@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ERP.Common;
+using ERP.Common.Location;
 
 namespace ERP.SCM.WMS
 {

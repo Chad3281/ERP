@@ -6,3 +6,8 @@ D:\Users\Chad\Documents\GitHub\ERP\ERP\ERP\bin\Debug\ERP.dll
 D:\Users\Chad\Documents\GitHub\ERP\ERP\ERP\bin\Debug\ERP.pdb
 D:\Users\Chad\Documents\GitHub\ERP\ERP\ERP\obj\Debug\ERP.dll
 D:\Users\Chad\Documents\GitHub\ERP\ERP\ERP\obj\Debug\ERP.pdb
+C:\Users\JakobyC\Documents\GitHub\ERP\ERP\ERP\bin\Debug\ERP.dll.config
+C:\Users\JakobyC\Documents\GitHub\ERP\ERP\ERP\bin\Debug\ERP.dll
+C:\Users\JakobyC\Documents\GitHub\ERP\ERP\ERP\bin\Debug\ERP.pdb
+C:\Users\JakobyC\Documents\GitHub\ERP\ERP\ERP\obj\Debug\ERP.dll
+C:\Users\JakobyC\Documents\GitHub\ERP\ERP\ERP\obj\Debug\ERP.pdb

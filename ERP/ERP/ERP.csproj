@@ -42,6 +42,10 @@
     <Compile Include="Common\ICode.cs" />
     <Compile Include="Common\IEmployee.cs" />
     <Compile Include="Common\ISchedule.cs" />
+    <Compile Include="Common\Location\IAddress.cs" />
+    <Compile Include="Common\Location\ICity.cs" />
+    <Compile Include="Common\Location\IPostalCode.cs" />
+    <Compile Include="Common\Location\IState.cs" />
     <Compile Include="Inventory_Management\InventoryManagement\IInventory.cs" />
     <Compile Include="Inventory_Management\InventoryManagement\IManagementStrategy.cs" />
     <Compile Include="Inventory_Management\InventoryManagement\JIT.cs" />
@@ -52,7 +56,7 @@
     <Compile Include="SCM\IUnit.cs" />
     <Compile Include="SCM\IUom.cs" />
     <Compile Include="SCM\WMS\IDockDoor.cs" />
-    <Compile Include="Common\ILocation.cs" />
+    <Compile Include="Common\Location\ILocation.cs" />
     <Compile Include="SCM\WMS\IWarehouse.cs" />
   </ItemGroup>
   <ItemGroup>
