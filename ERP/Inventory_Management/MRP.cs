@@ -2,8 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Domain.Items;
 
-namespace InventoryManagement.InventoryManagement
+namespace ERP.Inventory_Management
 {
     // Materials Requirement Planning inventory management strategy:
     public class MRP : IManagementStrategy

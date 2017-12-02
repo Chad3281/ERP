@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ERP.Common
+namespace Domain.Common
 {
     public interface IEmployee
     {

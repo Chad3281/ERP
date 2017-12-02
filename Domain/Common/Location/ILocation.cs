@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ERP.SCM.WMS
+namespace Domain.Common.Location
 {
-    public interface IDockDoor
+    public interface ILocation : ICode
     {
-        int DoorNumber { get; set; }
+        IAddress Address { get; set; }
     }
 }

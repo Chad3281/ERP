@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ERP.Common.Location
+namespace Domain.Common
 {
-    public interface ICity : ICode
+    public interface ISchedule
     {
+        DateTime Start { get; set; }
+        DateTime End { get; set; }
     }
 }

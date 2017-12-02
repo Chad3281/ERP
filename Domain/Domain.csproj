@@ -1,21 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{29F26904-3C87-4326-A38A-C73E1A8CB522}</ProjectGuid>
+    <ProjectGuid>{EEAC6624-D14F-4E16-95A9-8693162D5D6E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ERP</RootNamespace>
-    <AssemblyName>ERP</AssemblyName>
+    <RootNamespace>Domain</RootNamespace>
+    <AssemblyName>Domain</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -25,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -33,39 +29,34 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Inventory_Management\IManagementStrategy.cs" />
-    <Compile Include="Inventory_Management\JIT.cs" />
-    <Compile Include="Inventory_Management\MRP.cs" />
-  </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="SCM\WMS\Controlling\" />
-    <Folder Include="SCM\WMS\Directing\" />
-    <Folder Include="SCM\WMS\Organizing\" />
-    <Folder Include="SCM\WMS\Planning\" />
-    <Folder Include="SCM\WMS\Staffing\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Domain\Domain.csproj">
-      <Project>{eeac6624-d14f-4e16-95a9-8693162d5d6e}</Project>
-      <Name>Domain</Name>
-    </ProjectReference>
+    <Compile Include="Common\ICode.cs" />
+    <Compile Include="Common\IEmployee.cs" />
+    <Compile Include="Common\ISchedule.cs" />
+    <Compile Include="Common\IUom.cs" />
+    <Compile Include="Common\Location\IAddress.cs" />
+    <Compile Include="Common\Location\ICity.cs" />
+    <Compile Include="Common\Location\ILocation.cs" />
+    <Compile Include="Common\Location\IPostalCode.cs" />
+    <Compile Include="Common\Location\IState.cs" />
+    <Compile Include="Common\Uom.cs" />
+    <Compile Include="Items\IInventory.cs" />
+    <Compile Include="Items\IUnit.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sales\IOrder.cs" />
+    <Compile Include="Sales\IPurchaseOrder.cs" />
+    <Compile Include="Warehouse\IDockDoor.cs" />
+    <Compile Include="Warehouse\IWarehouse.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

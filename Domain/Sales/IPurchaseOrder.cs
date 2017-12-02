@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using InventoryManagement.Items;
 
-namespace InventoryManagement.OrderManagement
+namespace Domain.Sales
 {
     public interface IPurchaseOrder
     {
-        IList<IOrder> Orders { get; set; }
+        ICollection<IOrder> Orders { get; set; }
     }
 }

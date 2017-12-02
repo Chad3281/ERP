@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Domain.Items;
 
-namespace InventoryManagement.InventoryManagement
+namespace ERP.Inventory_Management
 {
 
     // Inventory management strategies such as JIT/MRP/etc.

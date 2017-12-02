@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ERP.Common;
-using ERP.Common.Location;
+using Domain.Common;
+using Domain.Common.Location;
 
-namespace InventoryManagement.Items
+namespace Domain.Items
 {
     public interface IUnit
     {

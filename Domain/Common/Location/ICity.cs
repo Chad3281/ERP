@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ERP.SCM {
-  public  interface IUnit {
+namespace Domain.Common.Location
+{
+    public interface ICity : ICode
+    {
     }
 }

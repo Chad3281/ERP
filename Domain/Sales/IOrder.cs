@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InventoryManagement.Items
+namespace Domain.Sales
 {
     public interface IOrder
     {

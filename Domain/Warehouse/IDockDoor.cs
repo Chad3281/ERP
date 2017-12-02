@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ERP.Common.Location
+namespace Domain.Warehouse
 {
-    public interface IPostalCode : ICode
+    public interface IDockDoor
     {
+        int DoorNumber { get; set; }
     }
 }
