@@ -8,6 +8,8 @@ namespace Domain.Common.Location
 {
     public interface IAddress
     {
-
+        ICity City { get; set; }
+        IState State { get; set; }
+        IPostalCode PostalCode { get; set; }
     }
 }

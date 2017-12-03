@@ -13,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -38,21 +40,39 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Inventory_Management\IManagementStrategy.cs" />
-    <Compile Include="Inventory_Management\JIT.cs" />
-    <Compile Include="Inventory_Management\MRP.cs" />
+    <Compile Include="SCM\Inventory\IManagementStrategy.cs" />
+    <Compile Include="SCM\Inventory\JIT.cs" />
+    <Compile Include="SCM\Inventory\MRP.cs" />
+    <Compile Include="Shared\Repositories\ConnectionFactory.cs" />
+    <Compile Include="Shared\Repositories\IConnectionFactory.cs" />
+    <Compile Include="Shared\Repositories\IRepository.cs" />
+    <Compile Include="Shared\Repositories\Repository.cs" />
+    <Compile Include="Shared\Repositories\SQLiteRepository.cs" />
+    <Compile Include="Shared\Repositories\SqlRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.106.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.106.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Accounting\" />
+    <Folder Include="CRM\" />
+    <Folder Include="HR\" />
+    <Folder Include="PLM\" />
+    <Folder Include="Sales\" />
     <Folder Include="SCM\WMS\Controlling\" />
     <Folder Include="SCM\WMS\Directing\" />
     <Folder Include="SCM\WMS\Organizing\" />
     <Folder Include="SCM\WMS\Planning\" />
     <Folder Include="SCM\WMS\Staffing\" />
+    <Folder Include="SRM\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj">
@@ -61,6 +81,13 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.106.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.106.0\build\net46\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.106.0\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.106.0\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
